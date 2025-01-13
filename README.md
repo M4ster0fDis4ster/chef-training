@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Overview
 
 Every Chef Infra installation needs a Chef Repository. This is the place where cookbooks, policyfiles, config files and other artifacts for managing systems with Chef Infra will live. We strongly recommend storing this repository in a version control system such as Git and treating it like source code.
@@ -18,3 +19,9 @@ The config file, `.chef/config.rb` is a repository-specific configuration file f
 ## Next Steps
 
 Read the README file in each of the subdirectories for more information about what goes in those directories.
+=======
+# myiis
+
+TODO: Enter the cookbook description here.
+
+>>>>>>> 111abfb379e77349f01493911e5acfccf6f740e8

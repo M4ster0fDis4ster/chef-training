@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Below are example of common git excludes.
 ## Please note that /cookbooks folder is ignored. This allows users to
 ## clone individual cookbooks into the /cookbook folder of the chef repo
@@ -122,3 +123,30 @@ nodes
 
 # ## Office Temp Files
 # ~$*
+=======
+.vagrant
+*~
+*#
+.#*
+\#*#
+.*.sw[a-z]
+*.un~
+
+# Bundler
+Gemfile.lock
+gems.locked
+bin/*
+.bundle/*
+
+# test kitchen
+.kitchen/
+kitchen.local.yml
+
+# Chef Infra
+Berksfile.lock
+.zero-knife.rb
+Policyfile.lock.json
+
+.idea/
+
+>>>>>>> 111abfb379e77349f01493911e5acfccf6f740e8
