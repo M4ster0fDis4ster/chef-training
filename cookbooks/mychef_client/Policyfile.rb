@@ -4,10 +4,7 @@
 # https://docs.chef.io/policyfile/
 
 # A name that describes what the system you're building with Chef does.
-name 'company_web'
-
-# This lets you source cookbooks from your chef-repo.
-default_source :chef_repo, '../'
+name 'mychef_client'
 
 # Where to find external cookbooks:
 default_source :supermarket
@@ -16,8 +13,4 @@ default_source :supermarket
 run_list 'mychef_client::default'
 
 # Specify a custom source for a single cookbook:
-# cookbook 'example_cookbook', path: '../cookbooks/example_cookbook'
-cookbook 'company_web', path: '../cookbooks/company_web'
-cookbook 'myiis', path: '../cookbooks/myiis'
-cookbook 'apache', path: '../cookbooks/apache'
-cookbook 'mychef_client', path: '../cookbooks/mychef_client'
+cookbook 'mychef_client', path: '.'

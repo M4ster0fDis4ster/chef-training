@@ -1,8 +1,8 @@
 {
-  "revision_id": "f9b192ed9172a7ea3e60cfac9bb1df3fd30b25351cf6b4d9cf982586d15b2895",
+  "revision_id": "0dd7ae59922d2fbff1d53722829a56caed3d87beb03bd6b5fc17b6e41c59bcc2",
   "name": "company_web",
   "run_list": [
-    "recipe[company_web::default]"
+    "recipe[mychef_client::default]"
   ],
   "included_policy_locks": [
 
@@ -17,7 +17,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/M4ster0fDis4ster/chef-training.git",
-        "revision": "b216919771598122e01b1c5a1ec76aef8262787a",
+        "revision": "8b870ec3f75c18c5f05277c4bdaf9f88f13f1671",
         "working_tree_clean": false,
         "published": false,
         "synchronized_remote_branches": [
@@ -37,7 +37,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/M4ster0fDis4ster/chef-training.git",
-        "revision": "b216919771598122e01b1c5a1ec76aef8262787a",
+        "revision": "8b870ec3f75c18c5f05277c4bdaf9f88f13f1671",
         "working_tree_clean": false,
         "published": false,
         "synchronized_remote_branches": [
@@ -46,6 +46,26 @@
       },
       "source_options": {
         "path": "../cookbooks/company_web"
+      }
+    },
+    "mychef_client": {
+      "version": "0.1.0",
+      "identifier": "a637bec930cbcd9c5ebbb273c463843f319909cc",
+      "dotted_decimal_identifier": "46786138692701133.44014256612688995.145406949919180",
+      "source": "../cookbooks/mychef_client",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://github.com/M4ster0fDis4ster/chef-training.git",
+        "revision": "8b870ec3f75c18c5f05277c4bdaf9f88f13f1671",
+        "working_tree_clean": false,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "../cookbooks/mychef_client"
       }
     },
     "myiis": {
@@ -86,6 +106,10 @@
         ">= 0.0.0"
       ],
       [
+        "mychef_client",
+        ">= 0.0.0"
+      ],
+      [
         "myiis",
         ">= 0.0.0"
       ]
@@ -103,6 +127,9 @@
           "apache",
           ">= 0.0.0"
         ]
+      ],
+      "mychef_client (0.1.0)": [
+
       ],
       "myiis (0.2.1)": [
 

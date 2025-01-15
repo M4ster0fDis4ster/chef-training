@@ -11,11 +11,17 @@ haproxy_frontend 'http-in' do
   default_backend 'server_backend'
 end
 
-haproxy_backend 'server-backend' do
-  server [
-    'ip-172-31-7-126.ec2.internal 172.31.7.126:80 maxconn 32',
-    'ip-172-31-52-5.ec2.internal 172.31.52.5:80 maxconn 32'
-  ]
+web_nodes = search('node','policy_name:company_web')
+
+server_array = []
+
+web_nodes.each do |one_node|
+  one_server = "#{one_node['cloud']['public_hostname']} #{one_node['cloud']['public_ipv4']} :80 maxconn 32"
+  server_array.push(one_server)
+end
+
+haproxy_backend 'server_backend' do
+  server_array = []
 end
 
 haproxy_service 'haproxy' do
