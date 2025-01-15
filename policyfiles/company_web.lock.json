@@ -1,0 +1,112 @@
+{
+  "revision_id": "f9b192ed9172a7ea3e60cfac9bb1df3fd30b25351cf6b4d9cf982586d15b2895",
+  "name": "company_web",
+  "run_list": [
+    "recipe[company_web::default]"
+  ],
+  "included_policy_locks": [
+
+  ],
+  "cookbook_locks": {
+    "apache": {
+      "version": "0.1.0",
+      "identifier": "d3f5e6c15c737e2adcb721b0e33d432d94352882",
+      "dotted_decimal_identifier": "59661591521293182.12064628124214077.73863039101058",
+      "source": "../cookbooks/apache",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://github.com/M4ster0fDis4ster/chef-training.git",
+        "revision": "b216919771598122e01b1c5a1ec76aef8262787a",
+        "working_tree_clean": false,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "../cookbooks/apache"
+      }
+    },
+    "company_web": {
+      "version": "0.1.0",
+      "identifier": "edd92eae89d4c8de6d9b7b7d34a93f3321b58527",
+      "dotted_decimal_identifier": "66948364000416968.62607959388927145.69488841426215",
+      "source": "../cookbooks/company_web",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://github.com/M4ster0fDis4ster/chef-training.git",
+        "revision": "b216919771598122e01b1c5a1ec76aef8262787a",
+        "working_tree_clean": false,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "../cookbooks/company_web"
+      }
+    },
+    "myiis": {
+      "version": "0.2.1",
+      "identifier": "0de9b5627a09e93c9dc061eafe2607c4070817b2",
+      "dotted_decimal_identifier": "3916139947756009.17061948204711462.8538512955314",
+      "source": "../cookbooks/myiis",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://github.com/M4ster0fDis4ster/chef-training.git",
+        "revision": "335b2c13c0e6d9d3f68aa9eb9fb0369a29ab978c",
+        "working_tree_clean": false,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "../cookbooks/myiis"
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "apache",
+        ">= 0.0.0"
+      ],
+      [
+        "company_web",
+        ">= 0.0.0"
+      ],
+      [
+        "myiis",
+        ">= 0.0.0"
+      ]
+    ],
+    "dependencies": {
+      "apache (0.1.0)": [
+
+      ],
+      "company_web (0.1.0)": [
+        [
+          "myiis",
+          ">= 0.0.0"
+        ],
+        [
+          "apache",
+          ">= 0.0.0"
+        ]
+      ],
+      "myiis (0.2.1)": [
+
+      ]
+    }
+  }
+}
