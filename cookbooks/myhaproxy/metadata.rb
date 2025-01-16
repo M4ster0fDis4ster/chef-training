@@ -3,7 +3,7 @@ maintainer 'The Authors'
 maintainer_email 'you@example.com'
 license 'All Rights Reserved'
 description 'Installs/Configures myhaproxy'
-version '1.0.0'
+version '1.1.0'
 chef_version '>= 16.0'
 depends 'haproxy', '~> 12.2.3'
 

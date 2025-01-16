@@ -11,7 +11,7 @@ haproxy_frontend 'http-in' do
   default_backend 'server_backend'
 end
 
-web_nodes = search('node','policy_name:company_web')
+web_nodes = search('node',"policy_name:company_web AND policy_group:#{node.policy_group}")
 
 server_array = []
 
@@ -25,5 +25,5 @@ haproxy_backend 'server_backend' do
 end
 
 haproxy_service 'haproxy' do
-  action [ :enable, :start ]
+  subscribes :reload, 'template[/etc/haproxy/haproxy.cfg]', :delayed
 end

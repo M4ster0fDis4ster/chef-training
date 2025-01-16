@@ -1,5 +1,5 @@
 {
-  "revision_id": "9777626b7b14ef7b2c730086cfb79fcc822560fb7dbcab24a7e951be68ee042d",
+  "revision_id": "094866136d78daa815e02210c4608bebd27c8a907b2f9556fbf0940021622abd",
   "name": "myhaproxy",
   "run_list": [
     "recipe[myhaproxy::default]"
@@ -20,15 +20,15 @@
       }
     },
     "myhaproxy": {
-      "version": "1.0.0",
-      "identifier": "493f8e50e2c4ca8307ad9b18fe69bb71ec93dfd7",
-      "dotted_decimal_identifier": "20617553774822602.36881664161939049.206097974812631",
+      "version": "1.1.0",
+      "identifier": "249c68d83670f02604002ef247e25982957e7096",
+      "dotted_decimal_identifier": "10305073279561968.10700447949146082.98417388712086",
       "source": "../cookbooks/myhaproxy",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/M4ster0fDis4ster/chef-training.git",
-        "revision": "8b870ec3f75c18c5f05277c4bdaf9f88f13f1671",
+        "revision": "3cdbd20efb75e809cf2204dd7532fea817004e3b",
         "working_tree_clean": false,
         "published": false,
         "synchronized_remote_branches": [
@@ -79,7 +79,7 @@
           ">= 0.0.0"
         ]
       ],
-      "myhaproxy (1.0.0)": [
+      "myhaproxy (1.1.0)": [
         [
           "haproxy",
           "~> 12.2.3"
